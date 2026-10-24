@@ -1,0 +1,23 @@
+# Credenciales y tokens de acceso (CRÍTICO)
+*.tk
+auth.tk
+token.tk
+
+# Perfiles de sesión de Selenium / Chrome
+perfil_selenium_uc/
+perfil_selenium/
+
+# Datasets generados por el script
+corpus_ocarina_remake.csv
+muestra_ruido_manual.csv
+
+# Archivos de entorno y caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Archivos de Jupyter Notebook (según tu entorno de VS Code)
+.ipynb_checkpoints/
