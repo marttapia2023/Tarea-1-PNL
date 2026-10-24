@@ -6,8 +6,10 @@ token.tk
 # Perfiles de sesión de Selenium / Chrome
 perfil_selenium_uc/
 perfil_selenium/
+perfil_selenium_yt/
 
 # Datasets generados por el script
+*.csv
 corpus_ocarina_remake.csv
 muestra_ruido_manual.csv
 
