@@ -1,0 +1,8 @@
+pandas>=2.2,<3.0
+selenium>=4.20,<5.0
+undetected-chromedriver>=3.5.5,<4.0
+scikit-learn>=1.5,<2.0
+matplotlib>=3.9,<4.0
+vaderSentiment==3.3.2
+transformers>=4.45,<5.0
+torch>=2.4,<3.0
