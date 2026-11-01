@@ -19,20 +19,29 @@
       "estado": "completado"
     },
     {
-      "metodo": "Ollama zero-shot (llama3.1:8b, temp=0)",
-      "F1_macro": null,
-      "estado": "not run: local Ollama unavailable (URLError)"
+      "metodo": "Ollama zero-shot (qwen2.5:1.5b, temp=0)",
+      "F1_macro": 0.47647525380710665,
+      "estado": "completado"
     }
   ],
   "notes": {
     "VADER": "English lexicon/rule-based method; configured thresholds -0.05 and 0.05.",
     "RoBERTa": "Pretrained CardiffNLP Twitter sentiment model.",
-    "Ollama": "not run: local Ollama unavailable (URLError)"
+    "Ollama": {
+      "execution": "zero-shot local",
+      "server_version": "0.40.13",
+      "model": "qwen2.5:1.5b",
+      "model_digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+      "temperature": 0,
+      "prompt": "Classify the sentiment expressed in each YouTube comment about the announcement about the remake of The legend of Zelda: Ocarina of Time. Return exactly one label per item: negative, neutral, or positive. Judge the author's expressed opinion, not the topic. Questions or factual statements without clear polarity are neutral. Consider negation, emojis, slang, and irony; if irony is ambiguous, choose neutral. Do not infer sentiment that is not expressed. Return a JSON object with a results array; each element must contain the input id and its label."
+    }
   },
   "versions": {
     "vaderSentiment": "3.3.2",
     "transformers": "4.57.6",
     "pretrained_model": "cardiffnlp/twitter-roberta-base-sentiment-latest",
-    "ollama": "not run: local Ollama unavailable (URLError)"
+    "ollama": "0.40.13",
+    "ollama_model": "qwen2.5:1.5b",
+    "ollama_model_digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b"
   }
 }
