@@ -1,0 +1,38 @@
+{
+  "n_textos": 200,
+  "kappa_cohen": 0.5343915343915344,
+  "label_mapping": {
+    "-1": "negative",
+    "0": "neutral",
+    "1": "positive"
+  },
+  "evaluated_against": "sentimiento_final from anotacion_integrantes.csv",
+  "results": [
+    {
+      "metodo": "VADER (vaderSentiment 3.3.2)",
+      "F1_macro": 0.4584212912554329,
+      "estado": "completado"
+    },
+    {
+      "metodo": "RoBERTa (cardiffnlp/twitter-roberta-base-sentiment-latest)",
+      "F1_macro": 0.5564367589684046,
+      "estado": "completado"
+    },
+    {
+      "metodo": "Ollama zero-shot (llama3.1:8b, temp=0)",
+      "F1_macro": null,
+      "estado": "not run: local Ollama unavailable (URLError)"
+    }
+  ],
+  "notes": {
+    "VADER": "English lexicon/rule-based method; configured thresholds -0.05 and 0.05.",
+    "RoBERTa": "Pretrained CardiffNLP Twitter sentiment model.",
+    "Ollama": "not run: local Ollama unavailable (URLError)"
+  },
+  "versions": {
+    "vaderSentiment": "3.3.2",
+    "transformers": "4.57.6",
+    "pretrained_model": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+    "ollama": "not run: local Ollama unavailable (URLError)"
+  }
+}
