@@ -6,22 +6,22 @@
     "0": "neutral",
     "1": "positive"
   },
-  "evaluated_against": "sentimiento_final from anotacion_integrantes.csv",
+  "evaluated_against": "sentimiento_final from updated anotacion_integrantes.csv",
   "results": [
     {
       "metodo": "VADER (vaderSentiment 3.3.2)",
-      "F1_macro": 0.4584212912554329,
-      "estado": "completado"
+      "F1_macro": 0.48706476936142007,
+      "estado": "recalculado con anotaciones actualizadas"
     },
     {
       "metodo": "RoBERTa (cardiffnlp/twitter-roberta-base-sentiment-latest)",
-      "F1_macro": 0.5564367589684046,
-      "estado": "completado"
+      "F1_macro": 0.6431077694235589,
+      "estado": "recalculado con anotaciones actualizadas"
     },
     {
       "metodo": "Ollama zero-shot (qwen2.5:1.5b, temp=0)",
-      "F1_macro": 0.47647525380710665,
-      "estado": "completado"
+      "F1_macro": 0.49658154658154663,
+      "estado": "recalculado con anotaciones actualizadas"
     }
   ],
   "notes": {
@@ -34,7 +34,8 @@
       "model_digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
       "temperature": 0,
       "prompt": "Classify the sentiment expressed in each YouTube comment about the announcement about the remake of The legend of Zelda: Ocarina of Time. Return exactly one label per item: negative, neutral, or positive. Judge the author's expressed opinion, not the topic. Questions or factual statements without clear polarity are neutral. Consider negation, emojis, slang, and irony; if irony is ambiguous, choose neutral. Do not infer sentiment that is not expressed. Return a JSON object with a results array; each element must contain the input id and its label."
-    }
+    },
+    "reevaluacion": "Se recalcularon kappa, F1-macro y matrices usando las nuevas etiquetas finales. Predicciones de modelos reutilizadas porque los 200 id_texto coinciden; no se repitio inferencia."
   },
   "versions": {
     "vaderSentiment": "3.3.2",
